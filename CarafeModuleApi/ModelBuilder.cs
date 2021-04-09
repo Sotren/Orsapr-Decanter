@@ -147,6 +147,7 @@ namespace CarafeModuleApi
                 _database.TransactionManager.StartTransaction())
             {
                 var blockTableRecord = GetBlockTableRecord(transaction);
+                 //TODO: RSDN
                 var _minHeightFigure = Math.Round((_carafeHeight / 1.5), 2);
 
                 Polyline acPoly = new Polyline();
@@ -400,16 +401,17 @@ namespace CarafeModuleApi
             using (Transaction transaction =
                 _database.TransactionManager.StartTransaction())
             {
+                //TODO: RSDN naming
                 ViewportTable vt =
                     (ViewportTable) transaction.GetObject(
                         _database.ViewportTableId, OpenMode.ForRead
                     );
-
+                //TODO: RSDN naming
                 ViewportTableRecord vtr =
                     (ViewportTableRecord) transaction.GetObject(
                         vt["*Active"], OpenMode.ForWrite
                     );
-
+                //TODO: RSDN naming
                 DBDictionary dict =
                     (DBDictionary) transaction.GetObject(
                         _database.VisualStyleDictionaryId, OpenMode.ForRead

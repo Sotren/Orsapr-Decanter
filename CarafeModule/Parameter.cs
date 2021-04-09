@@ -78,6 +78,7 @@ namespace CarafeModule
             Value = value;
         }
 
+        //TODO: XML
         public override bool Equals(object obj)
         {
             if (obj != null && obj.GetType() != this.GetType())

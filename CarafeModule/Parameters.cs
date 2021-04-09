@@ -166,6 +166,7 @@ namespace CarafeModule
                 };
         }
 
+        //TODO: В автосвойства
         /// <summary>
         /// Получить / задать наличие параметра 'Пробка графина' при построении.
         /// </summary>
@@ -175,6 +176,7 @@ namespace CarafeModule
             set => _stopperState = value;
         }
 
+        //TODO: В автосвойства
         /// <summary>
         /// Получить / задать наличие параметра 'Ручка графина' при построении.
         /// </summary>

@@ -12,6 +12,7 @@ namespace CarafeModule.UnitTests
         private const double _maxValue = 99;
         private const double _value = 30;
 
+
         private Parameter _parameter;
 
         [SetUp]
@@ -83,6 +84,7 @@ namespace CarafeModule.UnitTests
             Assert.AreEqual(expectedValue, actual, message);
         }
 
+        //TODO: Duplication
         [TestCase("Произошла ошибка при сравнении объектов.",
             TestName = "Позитивный тест метода Equals.")]
         public void Test_EqualsParameter_CorrectValue(string message)
@@ -100,6 +102,7 @@ namespace CarafeModule.UnitTests
             Assert.IsFalse(actualParameter.Equals(_parameter), message);
         }
 
+        //TODO: Duplication
         [TestCase("Некорректное создание конструктора.",
             TestName = "Тестирование конструктора класса.")]
         public void Test_Parameter(string message)

@@ -33,6 +33,7 @@ namespace CarafeModuleUI
             get => _parameters;
         }
 
+        //TODO: Не используется?
         /// <summary>
         /// Задать возможность редактирования полей HandleAngleTextBox и HandleLengthTextBox.
         /// </summary>
@@ -48,6 +49,7 @@ namespace CarafeModuleUI
             }
         }
 
+        //TODO: Не используется?
         /// <summary>
         /// Задать возможность редактирования поля StopperHeightTextBox.
         /// </summary>
