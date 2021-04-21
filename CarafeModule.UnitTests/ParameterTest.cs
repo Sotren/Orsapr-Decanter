@@ -85,13 +85,7 @@ namespace CarafeModule.UnitTests
         }
 
       
-        [TestCase("Произошла ошибка при сравнении объектов.",
-            TestName = "Позитивный тест метода Equals.")]
-        public void Test_EqualsParameter_CorrectValue(string message)
-        {
-            var actualParameter = new Parameter(_minValue, _maxValue, _value);
-            Assert.IsTrue(actualParameter.Equals(_parameter), message);
-        }
+       
 
         [TestCase(_maxValue, _minValue, _maxValue, "Ошибка при сравнении.",
             TestName = "Негативный тест метода Equals.")]
@@ -102,13 +96,15 @@ namespace CarafeModule.UnitTests
             Assert.IsFalse(actualParameter.Equals(_parameter), message);
         }
 
-        
-        [TestCase("Некорректное создание конструктора.",
-            TestName = "Тестирование конструктора класса.")]
-        public void Test_Parameter(string message)
+          
+        [TestCase("Произошла ошибка при сравнении объектов.",
+           TestName = "Позитивный тест метода Equals.")]
+        public void Test_EqualsParameter_CorrectValue(string message)
         {
             var actualParameter = new Parameter(_minValue, _maxValue, _value);
             Assert.IsTrue(actualParameter.Equals(_parameter), message);
         }
+        
+       
     }
 }
