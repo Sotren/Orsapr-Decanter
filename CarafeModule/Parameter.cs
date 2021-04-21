@@ -79,6 +79,9 @@ namespace CarafeModule
         }
 
         //TODO: XML
+        /// <summary>
+        /// Проверка текущих пораметорв.
+        /// </summary>
         public override bool Equals(object obj)
         {
             if (obj != null && obj.GetType() != this.GetType())
