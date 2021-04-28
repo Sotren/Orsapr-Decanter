@@ -107,8 +107,6 @@ namespace CarafeModule
         /// </summary>
         public Parameters()
         {
-           
-
             double maxThroatDiameter =
                 MinBaseDiameter;
 

@@ -134,7 +134,6 @@ namespace CarafeModule.UnitTests
             Assert.AreEqual(expectedValue, actualValue, message);
         }
 
-         //TODO: RSDN
         [TestCase(ParameterType.BaseDiameter, -10,
             "Значение меньше минимально допустимого для параметра 'BaseDiameter'.",
             TestName =

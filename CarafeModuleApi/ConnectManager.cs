@@ -27,7 +27,6 @@ namespace CarafeModuleApi
         /// </summary>
         public void Initialize()
         {
-             //TODO: RSDN
             MessageBox.Show("Плагин загружен. Введите команду 'BuildCarafe' для работы с плагином", "Info",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

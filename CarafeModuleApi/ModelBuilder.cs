@@ -7,6 +7,7 @@ using CadApplication = Autodesk.AutoCAD.ApplicationServices.Core.Application;
 
 namespace CarafeModuleApi
 {
+     //TODO: RSDN
     /// <summary>
     /// Класс, реализующий построение 3D-модели графина в AutoCAD.
     /// </summary>
@@ -401,17 +402,14 @@ namespace CarafeModuleApi
             using (Transaction transaction =
                 _database.TransactionManager.StartTransaction())
             {
-                //TODO: RSDN naming
                 ViewportTable vt =
                     (ViewportTable) transaction.GetObject(
                         _database.ViewportTableId, OpenMode.ForRead
                     );
-                //TODO: RSDN naming
                 ViewportTableRecord vtr =
                     (ViewportTableRecord) transaction.GetObject(
                         vt["*Active"], OpenMode.ForWrite
                     );
-                //TODO: RSDN naming
                 DBDictionary dict =
                     (DBDictionary) transaction.GetObject(
                         _database.VisualStyleDictionaryId, OpenMode.ForRead

@@ -78,7 +78,6 @@ namespace CarafeModule
             Value = value;
         }
 
-        //TODO: XML
         /// <summary>
         /// Проверка текущих пораметорв.
         /// </summary>
