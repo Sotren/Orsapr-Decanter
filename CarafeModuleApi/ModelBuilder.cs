@@ -11,7 +11,7 @@ namespace CarafeModuleApi
     /// <summary>
     /// Класс, реализующий построение 3D-модели графина в AutoCAD.
     /// </summary>
-    class ModelBuilder
+    public class ModelBuilder
     {
         /// <summary>
         /// Высота горла графина.
@@ -124,15 +124,9 @@ namespace CarafeModuleApi
             _document.LockDocument();
 
             DrawBase();
-            if (_parameters.StopperState == ParameterState.Present)
-            {
-                DrawStopper();
-            }
-
-            if (_parameters.HandleState == ParameterState.Present)
-            {
-                DrawHandle();
-            }
+            DrawStopper();
+            DrawHandle();
+            
 
             SetViewStyle();
 
@@ -156,9 +150,10 @@ namespace CarafeModuleApi
                 var index = 0;
 
                 acPoly.AddVertexAt(index++, new Point2d(0, 0), 0, 0, 0);
-                acPoly.AddVertexAt(index++, new Point2d(_baseRadius, 0), 0, 0, 0);
-                acPoly.AddVertexAt(index++, new Point2d(_baseRadius, _minHeightFigure), 0,
-                    0, 0);
+                acPoly.AddVertexAt(index++, new Point2d(_baseRadius, 
+                    0), 0, 0, 0);
+                acPoly.AddVertexAt(index++, new Point2d(_baseRadius,
+                    _minHeightFigure), 0,  0, 0);
 
                 if (_baseRadius != _throatRadius)
                 {
