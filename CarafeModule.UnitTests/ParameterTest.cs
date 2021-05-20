@@ -104,7 +104,5 @@ namespace CarafeModule.UnitTests
             var actualParameter = new Parameter(_minValue, _maxValue, _value);
             Assert.IsTrue(actualParameter.Equals(_parameter), message);
         }
-        
-       
     }
 }

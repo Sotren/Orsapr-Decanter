@@ -143,7 +143,7 @@ namespace CarafeModuleApi
             {
                 var blockTableRecord = GetBlockTableRecord(transaction);
                  //TODO: RSDN
-                var _minHeightFigure = Math.Round((_carafeHeight / 1.5), 2);
+                var minHeightFigure = Math.Round((_carafeHeight / 1.5), 2);
 
                 Polyline acPoly = new Polyline();
                 acPoly.SetDatabaseDefaults();
@@ -153,7 +153,7 @@ namespace CarafeModuleApi
                 acPoly.AddVertexAt(index++, new Point2d(_baseRadius, 
                     0), 0, 0, 0);
                 acPoly.AddVertexAt(index++, new Point2d(_baseRadius,
-                    _minHeightFigure), 0,  0, 0);
+                    minHeightFigure), 0,  0, 0);
 
                 if (_baseRadius != _throatRadius)
                 {
@@ -188,7 +188,7 @@ namespace CarafeModuleApi
 
                 acPoly.AddVertexAt(index++,
                     new Point2d(_baseRadius - _thicknessObject,
-                        _minHeightFigure), 0,
+                        minHeightFigure), 0,
                     0, 0);
 
                 acPoly.AddVertexAt(index++,

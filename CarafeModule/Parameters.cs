@@ -94,12 +94,6 @@ namespace CarafeModule
                 _parameters[parameterType].Value =
                     _parameters[parameterType].MaxValue;
             }
-            else if (_parameters[parameterType].Value <
-                     _parameters[parameterType].MinValue)
-            {
-                _parameters[parameterType].Value =
-                    _parameters[parameterType].MinValue;
-            }
         }
        
         /// <summary>

@@ -79,15 +79,10 @@ namespace CarafeModule
         }
 
         /// <summary>
-        /// Проверка текущих пораметорв.
+        /// Проверка текущих параметов.
         /// </summary>
         public override bool Equals(object obj)
         {
-            if (obj != null && obj.GetType() != this.GetType())
-            {
-                return false;
-            }
-
             Parameter parameter = (Parameter) obj;
             return (this.MinValue == parameter.MinValue &&
                     this.MaxValue == parameter.MaxValue && this.Value == parameter.Value);

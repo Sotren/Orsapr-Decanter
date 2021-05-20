@@ -269,5 +269,18 @@ namespace CarafeModule.UnitTests
             Assert.IsFalse(_parameters.IsCorrectValue(parameterType, value), message);
         }
         
+        [TestCase(ParameterType.BaseDiameter, 100, ParameterType.ThroatDiameter, 50,
+            "Значение не входит в допустимый диапазон значений для параметра 'BaseDiameter'.",
+            TestName =
+                "Тест метода IsCorrectValue: Ввод допустимного значения для параметра 'BaseDiameter'.")]
+        public void Test_Adjustment_Value(ParameterType parameterType, double maxValue, 
+            ParameterType dependParameterType, double expectedValue, string message)
+        {
+            _parameters.SetValue(parameterType, maxValue);
+            _parameters.SetValue(dependParameterType, maxValue);
+            _parameters.SetValue(parameterType, expectedValue);
+            var actualValue = _parameters.GetValue(dependParameterType);
+            Assert.AreEqual(expectedValue, actualValue, message);
+        }
     }
 }
