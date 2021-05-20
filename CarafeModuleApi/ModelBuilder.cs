@@ -7,7 +7,6 @@ using CadApplication = Autodesk.AutoCAD.ApplicationServices.Core.Application;
 
 namespace CarafeModuleApi
 {
-     //TODO: RSDN
     /// <summary>
     /// Класс, реализующий построение 3D-модели графина в AutoCAD.
     /// </summary>
